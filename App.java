@@ -19,7 +19,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
        
-        List<Integer> numbers = Arrays.asList(new Integer[]{20,4,50,7,9});
+        List<Integer> numbers = Arrays.asList(new Integer[]{200,4,50,7,9});
         OptionalDouble average = numbers.stream().mapToInt(num -> num * num)
                                                  .filter(squar -> squar > 100)
                                                  .average();
