@@ -18,13 +18,20 @@ import java.util.stream.Stream;
 public class App {
     public static void main(String[] args) throws Exception {
 
+
+      
+
        
-        List<Integer> numbers = Arrays.asList(new Integer[]{200,4,50,7,9});
-        OptionalDouble average = numbers.stream().mapToInt(num -> num * num)
-                                                 .filter(squar -> squar > 100)
-                                                 .average();
-        System.out.println(average.getAsDouble());
+        // List<Integer> numbers = Arrays.asList(new Integer[]{20,4,50,7,9});
+        // OptionalDouble average = numbers.stream().mapToInt(num -> num * num)
+        //                                          .filter(squar -> squar > 100)
+        //                                          .average();
+        // System.out.println(average.getAsDouble());
         
+        // int[] ar = new int[]{1,2,5,4};
+        // int i = Arrays.stream(ar).sum();
+        // System.out.println(i);
+
         // List<Integer> numbers = Arrays.asList(new Integer[]{2,2,2,2,2,2,2});
         // int suma = numbers.stream().mapToInt(x -> x).sum();
         // System.out.println(suma);
@@ -141,8 +148,7 @@ public class App {
         // x).filter(i -> i > 100).average().getAsDouble();
         // System.out.println(t);
 
-        // Arrays.stream(new int[]{1,2,3,4,5,6,7,8,9,0}).map(i -> i
-        // ).limit(5).forEach(System.out::println);
+        // Arrays.stream(new int[]{1,2,3,4,5,6,7,8,9,0}).map(i -> i).limit(5).forEach(System.out::println);
 
         // String s = Arrays.stream(new
         // int[]{1,2,3,4,5,6,7,8,9,0}).mapToObj(String::valueOf).skip(5).collect(Collectors.joining("-"));
@@ -222,18 +228,18 @@ public class App {
         // Excercise 7
         // Given the list of employees, you need to group them by name
 
-        // List<Employee> le2 = new ArrayList<>();
-        // le2.add(new Employee("Eduardo", 39));
-        // le2.add(new Employee("Ana", 23));
-        // le2.add(new Employee("Ivhana", 3));
-        // le2.add(new Employee("Ana", 2));
-        // le2.add(new Employee("Eduardo", 9));
+        List<Employee> le2 = new ArrayList<>();
+        le2.add(new Employee("Eduardo", 39));
+        le2.add(new Employee("Ana", 23));
+        le2.add(new Employee("Ivhana", 3));
+        le2.add(new Employee("Ana", 2));
+        le2.add(new Employee("Eduardo", 9));
 
         // // Map<String, List<Employee>> mr =
         // le2.stream().collect(Collectors.groupingBy(x -> x.getName()));
-        // Map<String, List<Employee>> mr =
-        // le2.stream().collect(Collectors.groupingBy(Employee::getName));
-        // mr.entrySet().stream().forEach(System.out::println);
+        Map<String, List<Employee>> mr =
+        le2.stream().collect(Collectors.groupingBy(Employee::getName));
+        mr.entrySet().stream().forEach(System.out::println);
 
     }
 
