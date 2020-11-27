@@ -23,8 +23,10 @@ public class HarmlessRansom {
         // Map<String, Long> noteFrec =  
         // Stream.of(notesArray).collect(Collectors
         // .groupingBy(String::toString,Collectors.counting()));
-        Map<String, Long> noteFrec = Stream.of(notesArray)
-                                           .collect(Collectors.groupingBy(String::valueOf, Collectors.counting()));
+        Map<String, Integer> noteFrec = Stream.of(notesArray)
+                                           .collect(
+                                               Collectors.groupingBy(String::valueOf,
+                                                                        Collectors.collectingAndThen(Collectors.counting(), Long::intValue)));
 
 
         Map<String, Long> magFrec = Stream.of(magazineArray)

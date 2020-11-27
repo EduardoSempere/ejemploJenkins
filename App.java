@@ -29,7 +29,7 @@ public class App {
         // System.out.println(average.getAsDouble());
         
         // int[] ar = new int[]{1,2,5,4};
-        // int i = Arrays.stream(ar).sum();
+        // int i = Arrays.stream(ar).max().getAsInt();
         // System.out.println(i);
 
         // List<Integer> numbers = Arrays.asList(new Integer[]{2,2,2,2,2,2,2});
@@ -137,12 +137,12 @@ public class App {
         // Consumer<String> str = str1 -> System.out.println(str1);
         // str.accept("Saket");
 
-        // List<String> list = Arrays.asList("A","B","C","D","B");
+        // List<String> lis{t = Arrays.asList("A","B","C","D","B");
 
         // Optional<String> r = list.stream().findAny();
         // if (r.isPresent()) {
         // System.out.println(r.get());
-        // }
+        // }}
 
         // double t = Arrays.stream(new int[]{ 100, 100, 9, 8, 200 }).map(x -> x *
         // x).filter(i -> i > 100).average().getAsDouble();
