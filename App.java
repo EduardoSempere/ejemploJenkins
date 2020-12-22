@@ -23,17 +23,20 @@ public class App {
 
        
         // List<Integer> numbers = Arrays.asList(new Integer[]{20,4,50,7,9});
-        // OptionalDouble average = numbers.stream().mapToInt(num -> num * num)
+        // Stream<Integer> stream = numbers.stream();
+        // OptionalDouble average = stream.mapToInt(num -> num * num)
         //                                          .filter(squar -> squar > 100)
         //                                          .average();
         // System.out.println(average.getAsDouble());
+     
+
         
         // int[] ar = new int[]{1,2,5,4};
         // int i = Arrays.stream(ar).max().getAsInt();
         // System.out.println(i);
 
         // List<Integer> numbers = Arrays.asList(new Integer[]{2,2,2,2,2,2,2});
-        // int suma = numbers.stream().mapToInt(x -> x).sum();
+        // int suma = numbers.stream().mapToInt(x -> x).sum(); 
         // System.out.println(suma);
 
         // Random randomNumSorter = new Random();

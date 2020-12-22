@@ -9,8 +9,18 @@ public class FrogRiverOne {
     }
 
     public static int solution(int X, int[] A) {
-        List<Integer> l = Arrays.stream(A).map(x -> x).boxed().collect(Collectors.toList());
-        int index = l.lastIndexOf(X);
-        return index;
+        
+        int result = 0;
+        boolean encontrado = false;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == X) {
+                result = result + i;
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            result = -1;
+        }
+        return result;
     }
 }
