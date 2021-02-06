@@ -11,7 +11,7 @@ public class IsPalidrome {
     
 
     public static void main(String[] args) {
-        System.out.println(esPalidrome("aaddaa"));
+        System.out.println(esPalidrome("Madam Im Adam"));
         // System.out.println(palindrome("bdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbababdbaba"));
     }
 
@@ -51,11 +51,10 @@ public class IsPalidrome {
 
     public static boolean esPalidrome(String s){
 
-        String validCharacters = "abcdefghijklmnopqrstuvwyxz";
-
+        String validCharacters = "abcdefghijklmnopqrstuvwyxz"; 
         int pointA = 0;
         int pointB = s.length()-1;
-        String[] arr = s.split("");
+        String[] arr = s.toLowerCase().split("");
         boolean result = true;
         while (pointA <= pointB) {
             if ((validCharacters.indexOf(arr[pointA]) != -1 ) && (validCharacters.indexOf(arr[pointB]) != -1)) {
